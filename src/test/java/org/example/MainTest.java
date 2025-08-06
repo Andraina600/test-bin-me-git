@@ -1,10 +1,16 @@
 package org.example;
 
+import org.junit.jupiter.api.Test;
+
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class MainTest {
-
-    @org.junit.jupiter.api.BeforeEach
-    void setUp() {
+    @Test
+    public void testSquare() {
+        Main calculator = new Main();
+        assertEquals(16, calculator.square(4));
+        assertEquals(25, calculator.square(5));
+        assertEquals(0, calculator.square(0));
     }
 }
